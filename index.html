@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyPaisa Integration Test</title>
+</head>
+<body>
+  <h1>EasyPaisa Integration Test</h1>
+  <button onclick="initializePayment()">Initiate Payment</button>
+
+  <script src="index.js"></script>
+  <script>
+    const initializePayment = async () => {
+      try {
+        const amount = 100; // Amount in PKR
+        const orderId = 'ORDER123456'; // Unique order ID
+        await initiatePayment(amount, orderId);
+      } catch (error) {
+        console.error('Error initializing payment:', error);
+      }
+    };
+  </script>
+</body>
+</html>
